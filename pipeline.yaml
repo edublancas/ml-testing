@@ -6,7 +6,12 @@ tasks:
     params:
       path_to_data: '{{here}}/raw.csv'
   
-  - source: tasks/fit.py
-    product: products/fit.ipynb
+  - source: tasks/clean.py
+    product:
+        nb: products/clean.ipynb
+        data: products/clean.csv
     params:
       path_to_data: '{{here}}/raw.csv'
+
+  - source: tasks/fit.py
+    product: products/fit.ipynb
