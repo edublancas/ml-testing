@@ -1,3 +1,5 @@
+executor: parallel
+
 tasks:
   - source: tasks/visualize.py
     product: products/visualize.ipynb
