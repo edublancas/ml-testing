@@ -20,8 +20,13 @@ jobs:
           eval "$(conda shell.bash hook)"
           conda activate env
           pytest
-      - name: Run pipeline
+      - name: Run training pipeline
         run: |
           eval "$(conda shell.bash hook)"
           conda activate env
           ploomber build
+      - name: Run serving pipeline
+        run: |
+          eval "$(conda shell.bash hook)"
+          conda activate env
+          ploomber build --entry-point pipeline.serve.yaml

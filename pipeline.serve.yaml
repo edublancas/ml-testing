@@ -1,0 +1,20 @@
+tasks:
+  - source: tasks/get-new.py
+    name: get
+    product:
+      nb: products/get-new.ipynb
+      data: products/new.csv
+
+  - source: tasks/clean.py
+    product:
+        nb: products/clean.ipynb
+        data: products/clean.csv
+    params:
+      training: false
+
+  - source: tasks/predict.py
+    product:
+        nb: products/fit.ipynb
+        data: products/preds.csv
+    params:
+        path_to_model: '{{here}}/products/model.pkl'
