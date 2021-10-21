@@ -1,3 +1,8 @@
+"""
+Functions for transforming raw data
+"""
+
+
 def chest_pain_type(series):
     """Convert chest_pain_type series from integer to string
     """

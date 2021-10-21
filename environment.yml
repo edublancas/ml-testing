@@ -22,3 +22,4 @@ dependencies:
     - ipywidgets
     - pytest
     - yapf
+    - invoke
