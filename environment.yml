@@ -1,0 +1,22 @@
+name: ml-testing
+
+channels:
+  - conda-forge
+
+dependencies:
+  - pip
+  - pygraphviz
+  - pip:
+    - ploomber
+    - jupyterlab
+    - papermill
+    - bubbly
+    - pandas-profiling
+    - numpy
+    - pandas
+    - matplotlib
+    - seaborn
+    - shap
+    - eli5
+    - pdpbox
+    - ipywidgets
