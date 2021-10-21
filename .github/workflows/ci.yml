@@ -13,6 +13,10 @@ jobs:
         run: |
           eval "$(conda shell.bash hook)"
           conda env create --file environment.yml --name env
+      # order is important here: unit tests should be fast. If they fail,
+      # there's no need to run the pipeline
+      - name: Run unit tests
+        run: pytest
       - name: Run pipeline
         run: |
           eval "$(conda shell.bash hook)"

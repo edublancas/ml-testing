@@ -1,3 +1,4 @@
+import transform
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
@@ -26,10 +27,12 @@ data.columns
 data['sex'][data['sex'] == 0] = 'female'
 data['sex'][data['sex'] == 1] = 'male'
 
-data['chest_pain_type'][data['chest_pain_type'] == 1] = 'typical angina'
-data['chest_pain_type'][data['chest_pain_type'] == 2] = 'atypical angina'
-data['chest_pain_type'][data['chest_pain_type'] == 3] = 'non-anginal pain'
-data['chest_pain_type'][data['chest_pain_type'] == 4] = 'asymptomatic'
+# %%
+# NOTE: values reported in the original source (UCI repository) are from 1-4
+# but this copy I downloaded from Kaggle has values 0-3, so I'm assuming
+# they're just shifted
+# we abstract the transformation so we can unit test it (see tests/test_transform.py)
+data['chest_pain_type'] = transform.chest_pain_type(data['chest_pain_type'])
 
 data['fasting_blood_sugar'][data['fasting_blood_sugar'] ==
                             0] = 'lower than 120mg/ml'
