@@ -14,4 +14,16 @@ tasks:
       path_to_data: '{{here}}/raw.csv'
 
   - source: tasks/fit.py
-    product: products/fit.ipynb
+    product:
+        nb: products/fit.ipynb
+        model: products/model.pkl
+        x_train: products/x_train.pkl
+        y_train: products/y_train.pkl
+        x_test: products/x_test.pkl
+        y_test: products/y_test.pkl
+        y_pred: products/y_pred.pkl
+        y_pred_quant: products/y_pred_quant.pkl
+        data: products/data.pkl
+
+  - source: tasks/evaluate.py
+    product: products/evaluate.ipynb
