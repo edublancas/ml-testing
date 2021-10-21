@@ -5,6 +5,7 @@ tasks:
       nb: products/get-new.ipynb
       data: products/new.csv
 
+  # note that we are using the same file as in the training pipeline
   - source: tasks/clean.py
     product:
         nb: products/clean.ipynb
