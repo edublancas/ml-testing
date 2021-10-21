@@ -33,6 +33,4 @@ tasks:
         data: products/data.pkl
 
   - source: tasks/evaluate.py
-    product:
-      nb: products/evaluate.ipynb
-      data: products/preds.csv
+    product: products/evaluate.ipynb
