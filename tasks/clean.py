@@ -61,4 +61,4 @@ data['exercise_induced_angina'] = data['exercise_induced_angina'].astype(
 data['st_slope'] = data['st_slope'].astype('object')
 data['thalassemia'] = data['thalassemia'].astype('object')
 
-data.to_csv(product['data'])
+data.to_csv(product['data'], index=False)
