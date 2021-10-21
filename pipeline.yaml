@@ -12,6 +12,7 @@ tasks:
         data: products/clean.csv
     params:
       path_to_data: '{{here}}/raw.csv'
+    on_finish: tests.quality.clean
 
   - source: tasks/fit.py
     product:
