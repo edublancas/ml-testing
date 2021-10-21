@@ -1,3 +1,10 @@
 tasks:
-  - source: analysis.py
-    product: products/analysis.ipynb
+  - source: tasks/visualize.py
+    product: products/visualize.ipynb
+    params:
+      path_to_data: '{{here}}/raw.csv'
+  
+  - source: tasks/fit.py
+    product: products/fit.ipynb
+    params:
+      path_to_data: '{{here}}/raw.csv'
