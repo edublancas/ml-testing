@@ -4,23 +4,35 @@ import seaborn as sns
 import pandas as pd
 
 # %% tags=["parameters"]
-upstream = None
+upstream = ['get']
 product = None
-path_to_data = None
+training = None
 
 # %%
-data = pd.read_csv(path_to_data)
+data = pd.read_csv(upstream['get']['data'])
 
 # %% _kg_hide-output=true id="v9RUg4_n80k5" outputId="0cc3839f-0922-481e-85d3-b33edbf488c9"
 # let's change the names of the  columns for better understanding
-
-data.columns = [
-    'age', 'sex', 'chest_pain_type', 'resting_blood_pressure', 'cholesterol',
-    'fasting_blood_sugar', 'rest_ecg', 'max_heart_rate_achieved',
-    'exercise_induced_angina', 'st_depression', 'st_slope',
-    'num_major_vessels', 'thalassemia', 'target'
+cols = [
+    'age',
+    'sex',
+    'chest_pain_type',
+    'resting_blood_pressure',
+    'cholesterol',
+    'fasting_blood_sugar',
+    'rest_ecg',
+    'max_heart_rate_achieved',
+    'exercise_induced_angina',
+    'st_depression',
+    'st_slope',
+    'num_major_vessels',
+    'thalassemia',
 ]
 
+if training:
+    cols = cols + ['target']
+
+data.columns = cols
 data.columns
 
 # %% _kg_hide-output=true id="JkA3_NBf_CnJ" outputId="913a92cd-1989-4347-a30b-67d88a7b5b22"

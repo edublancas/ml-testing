@@ -35,6 +35,7 @@ import seaborn as sns
 import plotly.offline as py
 from plotly.offline import init_notebook_mode, iplot
 import plotly.graph_objs as go
+
 init_notebook_mode(connected=True)
 from bubbly.bubbly import bubbleplot
 
@@ -42,13 +43,12 @@ from bubbly.bubbly import bubbleplot
 import shap
 
 # %% tags=["parameters"]
-upstream = None
+upstream = ['get']
 product = None
-path_to_data = None
 
 # %% _kg_hide-input=true _kg_hide-output=true id="0No8Wdtb8Mlw" outputId="b883289b-5690-4abb-bd4d-0cfc3fab5fa8"
 # reading the data
-data = pd.read_csv(path_to_data)
+data = pd.read_csv(upstream['get']['data'])
 
 # getting the shape
 data.shape
@@ -124,6 +124,7 @@ profile
 
 # %% _kg_hide-input=true
 import warnings
+
 warnings.filterwarnings('ignore')
 
 figure = bubbleplot(dataset=data,
@@ -159,6 +160,7 @@ plt.show()
 # checking the distribution of age amonng the patients
 
 import warnings
+
 warnings.filterwarnings('ignore')
 
 plt.style.use('fivethirtyeight')

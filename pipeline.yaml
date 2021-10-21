@@ -1,17 +1,23 @@
 executor: parallel
 
 tasks:
-  - source: tasks/visualize.py
-    product: products/visualize.ipynb
+  - source: tasks/get-historical.py
+    name: get
+    product:
+      nb: products/get-historical.ipynb
+      data: products/historical.csv
     params:
       path_to_data: '{{here}}/raw.csv'
+
+  - source: tasks/visualize.py
+    product: products/visualize.ipynb
   
   - source: tasks/clean.py
     product:
         nb: products/clean.ipynb
         data: products/clean.csv
     params:
-      path_to_data: '{{here}}/raw.csv'
+      training: true
     on_finish: tests.quality.clean
 
   - source: tasks/fit.py
@@ -27,4 +33,6 @@ tasks:
         data: products/data.pkl
 
   - source: tasks/evaluate.py
-    product: products/evaluate.ipynb
+    product:
+      nb: products/evaluate.ipynb
+      data: products/preds.csv
