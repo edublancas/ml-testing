@@ -18,6 +18,8 @@ The talk describes five stages of testing, from the most basic one to the most r
 4. [Training-serving skew (4-train-serve-skew)](https://github.com/edublancas/ml-testing/tree/4-train-serve-skew)
 5. [Model quality (5-model-quality)](https://github.com/edublancas/ml-testing/tree/5-model-quality)
 
+Tests are run automatically on each push using GitHub Actions; you can see the configuration file at [.github/workflows/ci.yml](.github/workflows/ci.yml)
+
 ## Setup
 
 ```sh
