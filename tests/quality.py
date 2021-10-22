@@ -28,4 +28,4 @@ def fit(product):
     # important to check both sides! a suddently "good" model is also bad
     # news and should be verified
     score = f1_score(y_test, y_pred)
-    assert 0.86 <= score <= 0.90, f'unexpected f1 score: {score}'
+    assert 0.86 <= score <= 0.92, f'unexpected f1 score: {score}'
