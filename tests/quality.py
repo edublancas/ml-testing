@@ -1,4 +1,8 @@
+from pathlib import Path
+import pickle
+
 from scipy.stats import ks_2samp
+from sklearn.metrics import f1_score
 import pandas as pd
 
 
@@ -15,3 +19,13 @@ def clean(product):
 
     # raise an error if it has changed
     assert same_distribution
+
+
+def fit(product):
+    y_pred = pickle.loads(Path(product['y_pred']).read_bytes())
+    y_test = pickle.loads(Path(product['y_test']).read_bytes()).values
+
+    # important to check both sides! a suddently "good" model is also bad
+    # news and should be verified
+    score = f1_score(y_test, y_pred)
+    assert 0.86 <= score <= 0.90, f'unexpected f1 score: {score}'
