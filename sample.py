@@ -6,7 +6,7 @@ def random_rample_between(a, b, n):
     return (b - a) * random.random_sample(n) + a
 
 
-def sample(n):
+def sample(n, include_target=False):
     """
     Sample synthetic data to simulate new observations
     """
@@ -25,4 +25,8 @@ def sample(n):
         'ca': random.choice([0, 1, 2, 3, 4], n),
         'thal': random.choice([0, 1, 2, 3], n),
     })
+
+    if include_target:
+        df['target'] = random.choice([0, 1], n)
+
     return df

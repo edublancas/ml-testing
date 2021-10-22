@@ -9,7 +9,7 @@ tasks:
   - source: tasks/clean.py
     product:
         nb: '{{products_root}}/clean.ipynb'
-        data: '{{products_root}}/clean.csv'
+        data: '{{products_root}}/clean-serve.csv'
     params:
       training: false
 

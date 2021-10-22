@@ -11,7 +11,9 @@ root_path = Path(__file__).parent.parent
 def test_error_on_incorrect_number_of_input_columns(tmp_path):
     # switch script that loads data for one that gets corruped data
     spec = yaml.safe_load(Path('pipeline.serve.yaml').read_text())
-    spec['tasks'][0]['source'] = 'tasks/get-fake.py'
+    get = spec['tasks'][0]
+    get['source'] = 'tasks/get-fake.py'
+    get['params'] = dict(type_='fake_column')
 
     # store output in a temporary directory to avoid overwriting our results
     env = dict(products_root=tmp_path, here=root_path)
