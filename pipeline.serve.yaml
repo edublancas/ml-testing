@@ -2,20 +2,20 @@ tasks:
   - source: tasks/get-new.py
     name: get
     product:
-      nb: products/get-new.ipynb
-      data: products/new.csv
+      nb: '{{products_root}}/get-new.ipynb'
+      data: '{{products_root}}/new.csv'
 
   # note that we are using the same file as in the training pipeline
   - source: tasks/clean.py
     product:
-        nb: products/clean.ipynb
-        data: products/clean.csv
+        nb: '{{products_root}}/clean.ipynb'
+        data: '{{products_root}}/clean.csv'
     params:
       training: false
 
   - source: tasks/predict.py
     product:
-        nb: products/fit.ipynb
-        data: products/preds.csv
+        nb: '{{products_root}}/fit.ipynb'
+        data: '{{products_root}}/preds.csv'
     params:
         path_to_model: '{{here}}/products/model.pkl'

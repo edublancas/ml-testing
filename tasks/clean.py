@@ -31,6 +31,15 @@ cols = [
 
 if training:
     cols = cols + ['target']
+# serving, add checks here...
+else:
+    # check number of columns match
+    actual = len(data.columns)
+    expected = len(cols)
+    message = f'Wrong number of columns, expected {expected}, got: {actual}'
+    assert actual == expected, message
+
+    # add more check here...
 
 data.columns = cols
 data.columns
