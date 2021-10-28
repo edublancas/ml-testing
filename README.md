@@ -2,11 +2,15 @@
 
 [![CI](https://github.com/edublancas/ml-testing/workflows/CI/badge.svg)](https://github.com/edublancas/ml-testing/workflows/CI/badge.svg)
 
-Code for PyData Global 2021 Presentation by [@edublancas](https://twitter.com/intent/follow?screen_name=edublancas).
+
+Code for PyData Global 2021 Presentation by [@edublancas](https://twitter.com/intent/follow?screen_name=edublancas). [Slides available here](https://blancas.io/talks/pydata-21.pdf).
 
 The project is developed using [Ploomber](https://github.com/ploomber/ploomber); check it out! :)
 
 If you have questions, [ping me on Slack](http://community.ploomber.io/).
+
+
+*Note: A blog post is in the making. It will be [published here](https://ploomber.io/blog/). Follow [@ploomber](https://twitter.com/intent/follow?screen_name=ploomber) on Twitter, or subscribe to our [newsletter](https://www.getrevue.co/profile/ploomber) to know when it's out.*
 
 ## Organization
 
@@ -45,8 +49,10 @@ ploomber build
 pytest
 ```
 
-## References
+## Resources
 
-* Recording will be available after the conference
-* [Based on this Kaggle notebook](https://www.kaggle.com/roshansharma/heart-diseases-analysis)
+* [Slides](https://blancas.io/talks/pydata-21.pdf).
+* Recording will be available here after the PyData Global 2021 conference.
+* A blog post is in the making. It will be [published here](https://ploomber.io/blog/). Follow [@ploomber](https://twitter.com/intent/follow?screen_name=ploomber) on Twitter, or subscribe to our [newsletter](https://www.getrevue.co/profile/ploomber) to know when it's out.
+* [Based on this Kaggle notebook](https://www.kaggle.com/roshansharma/heart-diseases-analysis).
 
