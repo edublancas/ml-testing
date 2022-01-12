@@ -6,19 +6,18 @@ channels:
 dependencies:
   - pip
   - pygraphviz
+  - numpy
+  - pandas
+  - matplotlib
+  - numba
   - pip:
     - ploomber
     - jupyterlab
     - papermill
     - bubbly
     - pandas-profiling
-    - numpy
-    - pandas
-    - matplotlib
     - seaborn
     - shap
     - eli5
     - pdpbox
     - ipywidgets
-    - pytest
-    - yapf
