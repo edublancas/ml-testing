@@ -21,3 +21,5 @@ dependencies:
     - eli5
     - pdpbox
     - ipywidgets
+    - pytest
+    - yapf
