@@ -3,7 +3,7 @@
 [![CI](https://github.com/edublancas/ml-testing/workflows/CI/badge.svg)](https://github.com/edublancas/ml-testing/workflows/CI/badge.svg)
 
 
-Code for PyData Global 2021 Presentation by [@edublancas](https://twitter.com/intent/follow?screen_name=edublancas). [Slides available here](https://blancas.io/talks/pydata-21.pdf).
+Code for [PyData Global 2021]((https://www.youtube.com/watch?v=Oc5x0qrB0FA)) Presentation by [@edublancas](https://twitter.com/intent/follow?screen_name=edublancas). [Slides available here](https://blancas.io/talks/pydata-21.pdf).
 
 The project is developed using [Ploomber](https://github.com/ploomber/ploomber); check it out! :)
 
@@ -56,6 +56,6 @@ pytest
 
 ## Resources
 
+* [Recording](https://www.youtube.com/watch?v=Oc5x0qrB0FA)
 * [Slides](https://blancas.io/talks/pydata-21.pdf).
-* Recording will be available here after the PyData Global 2021 conference.
 * [Based on this Kaggle notebook](https://www.kaggle.com/roshansharma/heart-diseases-analysis).
